@@ -1,0 +1,278 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu&display=swap');
+
+
+body{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    background-image: url("asset/sky.png");
+    background-size: cover;
+}
+
+.profile-card{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width:370px;
+    width:100%;
+    background: white;
+    border-radius: 20px;
+    padding:30px;
+    box-shadow: 0 7px 10px rgba(12, 11, 11, 0.2) ,0px 10px 15px rgba(115, 3, 110, 0.4);
+    overflow: hidden;
+
+}
+
+
+
+
+.image .profileimg{
+    display: flex;
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit:cover;
+    background-color: rgb(104, 1, 61);
+    border:3px solid white
+}
+
+.image{
+    
+    position: relative;
+    height: 200px;
+    width:200px;
+    padding:3px;
+    background-color: rgb(6, 124, 114);
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+.profile-card .text-data{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.floral{
+    position: absolute;
+    height: 50%;
+    width:100%;
+    bottom:0;
+    left:0;
+    z-index: 0;
+}
+@keyframes floral{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:0.5;
+    }
+}
+.floralimg{
+    width:100%;
+    height: 100%;
+    align-items: center;
+    opacity: 0.5;
+    animation-name: floral;
+    animation-duration: 3s;
+
+}
+
+.text-data .name{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.text-data .job{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.profile-card .media-buttons{
+    display:flex;
+    align-items:center;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+
+.profile-card .link{
+    display: flex;
+    color: rgb(0, 0, 0);
+    background-color: rgba(115, 3, 110, 0.4);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.profile-card::before{
+    content: ' ';
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius: 20px 20px 0 0;
+    height:50%;
+    width:100%;
+    background-color: #030363;
+
+}
+
+
+@keyframes animate{
+    from{
+        transform: translate(0,0)  rotate(0dege);
+    }
+    to{
+        transform:translate(-2500px,1000px) rotate(720deg);
+    }
+}
+
+@keyframes animate2 {
+    from{
+        transform: translate(0,0)  rotate(0dege);
+    }
+    to{
+        transform:translate(2500px,1800px) rotate(1080deg);
+    }
+}
+
+@keyframes animate3{
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform:translate(-2500px,2000px);
+    }
+}
+
+@keyframes animate4{
+    from{
+        transform: translate(0,0)  rotate(0dege);
+    }
+    to{
+        transform:translate(2500px,-2000px) rotate(720deg);
+    }
+}
+
+
+@keyframes animate5{
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform:translate(2500px,-2000px);
+    }
+}
+
+
+@keyframes animate6 {
+    from{
+        transform: translate(0,0)  rotate(0dege);
+    }
+    to{
+        transform:translate(-2500px,-1800px) rotate(1080deg);
+    }
+}
+
+
+
+.planet1 {
+    position: absolute;
+    top: 10px;
+    right: -100px;
+    height: 100px;
+    width: 100px;
+    animation: animate 60s;
+    animation-iteration-count: infinite;
+}
+
+.planet2 {
+    position: absolute;
+    bottom: 270px;
+    left: -141px;
+    height: 141px;
+    width: 141px;
+    animation: animate4 60s;
+    animation-delay: 25s;
+    animation-iteration-count: infinite;
+}
+
+.planet3 {
+    position: absolute;
+    top: 250px;
+    right: -134px;
+    height: 133px;
+    width: 134px;
+    animation: animate2 1s;
+    
+}
+
+.planet4 {
+    position: absolute;
+    top: -177px;
+    right: 30%;
+    height: 177px;
+    width: 184px;
+    animation: animate3 60s;
+    animation-delay: 35s;
+    animation-iteration-count: infinite;
+}
+
+.astroid {
+    position: absolute;
+    top: 10px;
+    left: -149px;
+    height: 149px;
+    width: 147px;
+    animation: animate2 60s;
+    animation-delay: 15s;
+    animation-iteration-count: infinite;
+}
+
+.astroid2{
+    position: absolute;
+    bottom: -195px;
+    right: 131px;
+    height: 194px;
+    width: 193px;
+    animation: animate6 60s;
+    animation-delay: 50s;
+    animation-iteration-count: infinite;
+
+}
+
+.rocket {
+    position: absolute;
+    bottom: 10px;
+    left: -100px;
+    height: 100px;
+    width: 100px;
+    animation: animate5 50s;
+    animation-delay: 40s;
+    animation-iteration-count: infinite;
+}
